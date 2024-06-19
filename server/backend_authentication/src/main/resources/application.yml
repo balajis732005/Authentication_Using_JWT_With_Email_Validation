@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: backend_authentication
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Jwt_Authentication
+    username: postgres
+    password: "]})SqL({[100"
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format-sql : true
+      show-sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.postgreSQLDialect
+  main:
+    allow-circular-references: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: balajifirefuture@gmail.com
+    password: yhfzbkwcjvykzlfo
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+        connectiontimeout: 5000
+        timeout: 3000
+        writetimeout: 5000
+application:
+  security:
+    jwt:
+      secretKey: tGYA-QQzbSjjUj2uYR31KPecdTRBliGOpGKUVNJY8WY
+      jwtExpiration: 86400000
